@@ -12,13 +12,13 @@ function CoinDisplay({ coin }) {
   }
   useEffect(()=>{
 getData();
-  })
+  },[])
 
   return (
     <div className="home">
       <h1>Top 20 Cryptos</h1>
       <div className="coins-container">
-        {coins.map((id,name,symbol,rank,price_usd) => (
+        {coins.map(({id,name,symbol,rank,price_usd}) => (
           <CoinCard 
            key={id}   
           id={id}
