@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-function CoinCard({ id,name,symbol,rank,price_usd}) {
+function CoinCard({id,symbol,name,rank,price_usd}) {
   return (
     <div className="coin-card">
       <h3 className="coin-name">{name}</h3>
@@ -10,7 +10,7 @@ function CoinCard({ id,name,symbol,rank,price_usd}) {
       <p className="coin-price">Price: ${price_usd}</p>
       <Link className="view-details-link" href={`/coins/${id}`}>
         View Details
-      </Link>
+      </Link> 
     </div>
   );
 }
